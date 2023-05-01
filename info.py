@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'lazyPrinces')
 API_ID = int(environ.get('API_ID', '16104137'))
 API_HASH = environ.get('API_HASH', '033a766fa21610d5658e8ed63cc98aa3')
-BOT_TOKEN = environ.get('BOT_TOKEN', "581845604:BBFU9Yx2LRhw1m8usazVWTYIBE0kfn7wVCY")
+BOT_TOKEN = environ.get('BOT_TOKEN', "5958873080:AAHC9Ri-mc9llkhKQ6mLQI4Qj0svj55kx2s")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -26,7 +26,7 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/a16ae2dd92e3b67df73ca.jpg')
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '899497512').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001727865520').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001570507825').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '889497512').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '-1001697509780')
@@ -40,8 +40,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001835997345'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'LazyPrincessSupport')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001570507825'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'SM_updates_12')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
@@ -52,7 +52,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), False)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001570507825')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
